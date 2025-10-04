@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class manualsort {
     class Solution {
+
+        //let us reduce space complexity
     public static ArrayList sortColors(int[] nums) {
         int n=nums.length;
         int count0=0;
@@ -41,7 +43,7 @@ public class manualsort {
     }
 }
     public static void main(String[] args) {
-        int nums[]={2,0,1};
+        int nums[]={2,0,0,2,2,1};
         ArrayList arrayList=Solution.sortColors(nums);
 
         for (int i = 0; i < arrayList.size(); i++) {
