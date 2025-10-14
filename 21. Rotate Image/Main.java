@@ -29,16 +29,25 @@ public class Main {
 
 class Solution {
     public void rotate(int[][] matrix) {
+        //len of the row 
         int n = matrix.length;
-        for (int i = 0; i < (n + 1) / 2; i++) {
-            for (int j = 0; j < n / 2; j++) {
-                int temp = matrix[i][j]; // store top
+        for (int i = 0; i < (n+1)/2; i++) {
+            for (int j = 0; j < n/2; j++) {
+                int temp=matrix[i][j];
+                matrix[i][j]=matrix[n-1-j][i];//top => top right
+               matrix[n-1-j][i]=matrix[n-1-i][n-1-j]; //top right=> right bottom
+               matrix[n-1-i][n-1-j]=matrix[j][n-1-i];
+               matrix[j][n-1-i]=temp;
 
-                matrix[i][j] = matrix[n - 1 - j][i];               // left -> top
-                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j]; // bottom -> left
-                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i]; // right -> bottom
-                matrix[j][n - 1 - i] = temp;                        // top -> right
+
+                
+
+                
             }
+            
         }
+
+    
+    
     }
 }
