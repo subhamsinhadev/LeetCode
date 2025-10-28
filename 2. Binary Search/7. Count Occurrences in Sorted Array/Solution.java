@@ -34,7 +34,7 @@ public class Solution {
 
             } else {
                 high = mid - 1;
-            }
+            } 
 
         }
 
