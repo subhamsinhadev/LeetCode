@@ -3,16 +3,21 @@ public class Solution {
         int low=0;
         int high=nums.length-1;
         int n=nums.length;
-        while (low<=high) {
+        
+        
+        while (low<high) {
             int mid=low+(high-low)/2;
-            int next=nums[mid+1]%n;
-            int prev=nums[mid+n-1]%n;
+            if(nums[mid]==nums[mid^1]) low=mid+1;
+            else high=mid;
             
-            
-        }
-        
+          
 
-        return -1;
         
+    }
+    return nums[low];
+}
+    public static void main(String[] args) {
+        int arr[]={0,0,1,1,5,6,6};
+        System.out.println(new Solution().singleNonDuplicate(arr));
     }
 }
